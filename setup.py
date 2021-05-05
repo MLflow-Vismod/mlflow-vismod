@@ -5,7 +5,7 @@ APP_NAME = "mlflow_vismod"
 VERSION = "1.1.1"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard, Andrew Bauman"
-DESCRIPTION = "MLflow model flavour for mlflow_vismod visualization grammar"
+DESCRIPTION = "MLflow model flavor for managing visualizations as models"
 
 setup(
     name=APP_NAME,
