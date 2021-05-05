@@ -31,7 +31,7 @@ def test_logging():
     mlflow_vismod.log_model(
         model=viz,
         artifact_path='viz',
-        style='vegalite',
+        style='altair',
     )
 
 
@@ -42,7 +42,7 @@ def test_loading():
             run.info.artifact_uri,
             'viz',
         ),
-        style='vegalite',
+        style='altair',
     )
 
 
@@ -58,6 +58,6 @@ def test_display():
             run.info.artifact_uri,
             'viz',
         ),
-        style='vegalite',
+        style='altair',
     )
     viz.display(df)

@@ -14313,7 +14313,7 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14331,28 +14331,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/jhibba/miniconda3/envs/mlflow-vizmod/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14507,19 +14485,6 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/jhibba/miniconda3/envs/mlflow-vizmod/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
@@ -14633,19 +14598,6 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/jhibba/miniconda3/envs/mlflow-vizmod/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
@@ -14751,8 +14703,8 @@ a.anchor-link {
     <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="n">viz_iris</span><span class="p">,</span> 
         <span class="n">artifact_path</span><span class="o">=</span><span class="s1">&#39;viz&#39;</span><span class="p">,</span>
-        <span class="n">style</span><span class="o">=</span><span class="s1">&#39;vegalite&#39;</span><span class="p">,</span>
-        <span class="n">input_example</span><span class="o">=</span><span class="n">df_iris</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span><span class="p">,</span>
+        <span class="n">input_example</span><span class="o">=</span><span class="n">df_iris</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span>
     <span class="p">)</span>
     
     <span class="c1"># Optional: log artifact</span>
@@ -14784,31 +14736,18 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/jhibba/miniconda3/envs/mlflow-vizmod/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-6e71fc9bf4f74869ac094294a023b9c5"></div>
+<div id="altair-viz-b49d4a459d0c443fb282f9aed9c11c74"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6e71fc9bf4f74869ac094294a023b9c5") {
-      outputDiv = document.getElementById("altair-viz-6e71fc9bf4f74869ac094294a023b9c5");
+    if (outputDiv.id !== "altair-viz-b49d4a459d0c443fb282f9aed9c11c74") {
+      outputDiv = document.getElementById("altair-viz-b49d4a459d0c443fb282f9aed9c11c74");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -14874,7 +14813,7 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_uri</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">run_iris</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()[</span><span class="s1">&#39;info&#39;</span><span class="p">][</span><span class="s1">&#39;artifact_uri&#39;</span><span class="p">],</span> <span class="s1">&#39;viz&#39;</span><span class="p">)</span>
 <span class="n">loaded_viz_iris</span> <span class="o">=</span> <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span>
     <span class="n">model_uri</span><span class="o">=</span><span class="n">model_uri</span><span class="p">,</span>
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;vegalite&#39;</span>
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -14897,7 +14836,7 @@ a.anchor-link {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example MLflow Model Run</span>
 <span class="c1"># - vizmod flavor</span>
-<span class="c1"># - vegalite `style`</span>
+<span class="c1"># - altair `style`</span>
 <span class="k">with</span> <span class="n">mlflow</span><span class="o">.</span><span class="n">start_run</span><span class="p">()</span> <span class="k">as</span> <span class="n">run_diamond</span><span class="p">:</span>    
     <span class="c1"># Reuse Iris Viz</span>
     <span class="n">viz_diamond</span> <span class="o">=</span> <span class="n">loaded_viz_iris</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">df_diamond</span><span class="p">)</span>
@@ -14915,8 +14854,8 @@ a.anchor-link {
     <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="n">viz_diamond</span><span class="p">,</span> 
         <span class="n">artifact_path</span><span class="o">=</span><span class="s1">&#39;viz&#39;</span><span class="p">,</span>
-        <span class="n">style</span><span class="o">=</span><span class="s1">&#39;vegalite&#39;</span><span class="p">,</span>
-        <span class="n">input_example</span><span class="o">=</span><span class="n">df_diamond</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span><span class="p">,</span>
+        <span class="n">input_example</span><span class="o">=</span><span class="n">df_diamond</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span>
     <span class="p">)</span>
     
     <span class="c1"># Optional: log artifact</span>
@@ -14946,12 +14885,12 @@ a.anchor-link {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-5bc3375ae5b047d59fba9b93577160c6"></div>
+<div id="altair-viz-c0fcf9929ca74912b3eebbc64037f130"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5bc3375ae5b047d59fba9b93577160c6") {
-      outputDiv = document.getElementById("altair-viz-5bc3375ae5b047d59fba9b93577160c6");
+    if (outputDiv.id !== "altair-viz-c0fcf9929ca74912b3eebbc64037f130") {
+      outputDiv = document.getElementById("altair-viz-c0fcf9929ca74912b3eebbc64037f130");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15037,12 +14976,12 @@ a.anchor-link {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-0cf74db6698640f1b5c3ae9cb58a84e5"></div>
+<div id="altair-viz-88a61a420e9947659165a38b50fd299f"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0cf74db6698640f1b5c3ae9cb58a84e5") {
-      outputDiv = document.getElementById("altair-viz-0cf74db6698640f1b5c3ae9cb58a84e5");
+    if (outputDiv.id !== "altair-viz-88a61a420e9947659165a38b50fd299f") {
+      outputDiv = document.getElementById("altair-viz-88a61a420e9947659165a38b50fd299f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15247,31 +15186,18 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/jhibba/miniconda3/envs/mlflow-vizmod/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-641a099aafa14e54acb1cd56ce52f467"></div>
+<div id="altair-viz-98371280a1c347bfa20e152b442416e6"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-641a099aafa14e54acb1cd56ce52f467") {
-      outputDiv = document.getElementById("altair-viz-641a099aafa14e54acb1cd56ce52f467");
+    if (outputDiv.id !== "altair-viz-98371280a1c347bfa20e152b442416e6") {
+      outputDiv = document.getElementById("altair-viz-98371280a1c347bfa20e152b442416e6");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15344,7 +15270,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Deploy an interactive web visualization: This use case is particuarly effective with Vegalite, since models are encoded as JSON objects, which accept pointers to data.  This means you can store the JSON object as an artifact and use the visualization API to point it at new data.<ul>
+<li>Deploy an interactive web visualization: This use case is particuarly effective with Vegalit, since models are encoded as JSON objects, which accept pointers to data.  This means you can store the JSON object as an artifact and use the visualization API to point it at new data.<ul>
 <li>Encode a visualization (ie. a geo map for ICU bed utilization and covid cases for each county in the USA with size/color encodings and tooltips which help the end user make decisions on where patients or resources should be sent)</li>
 <li>register the visualization</li>
 <li>pull the visualization and point it at a compliant data set of interest</li>
@@ -15385,7 +15311,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-Displaying chart at <a href='http://localhost:24617/' target='_blank'>http://localhost:24617/</a>
+Displaying chart at <a href='http://localhost:18256/' target='_blank'>http://localhost:18256/</a>
 </div>
 
 </div>
