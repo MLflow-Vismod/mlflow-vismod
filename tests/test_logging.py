@@ -7,7 +7,7 @@ import altair as alt
 import pandas as pd
 
 # Internal Libraries
-import mlflow_vismod
+import mlflow_vizmod
 
 
 def get_latest_run():
@@ -28,7 +28,7 @@ def test_logging():
         y='y',
     )
 
-    mlflow_vismod.log_model(
+    mlflow_vizmod.log_model(
         model=viz,
         artifact_path='viz',
         style='altair',
@@ -37,7 +37,7 @@ def test_logging():
 
 def test_loading():
     run = get_latest_run()
-    viz = mlflow_vismod.load_model(
+    viz = mlflow_vizmod.load_model(
         model_uri=os.path.join(
             run.info.artifact_uri,
             'viz',
@@ -53,7 +53,7 @@ def test_display():
     })
 
     run = get_latest_run()
-    viz = mlflow_vismod.load_model(
+    viz = mlflow_vizmod.load_model(
         model_uri=os.path.join(
             run.info.artifact_uri,
             'viz',

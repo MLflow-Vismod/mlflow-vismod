@@ -1,5 +1,5 @@
 """
-The `mlflow_vismod` module provides an API for logging and loading Vega models. This module
+The `mlflow_vizmod` module provides an API for logging and loading Vega models. This module
 exports Vega models with the following flavors:
 
 Vega (native) format
@@ -29,11 +29,11 @@ from mlflow.tracking.artifact_utils import _download_artifact_from_uri
 
 
 # Internal Libraries
-import mlflow_vismod
-import mlflow_vismod.styles
+import mlflow_vizmod
+import mlflow_vizmod.styles
 
 
-FLAVOR_NAME = "mlflow_vismod"
+FLAVOR_NAME = "mlflow_vizmod"
 MODEL_DIR_SUBPATH = "viz"
 SERIALIZATION_FORMAT_PICKLE = "pickle"
 SERIALIZATION_FORMAT_CLOUDPICKLE = "cloudpickle"
@@ -55,7 +55,7 @@ def iter_namespace(ns_pkg):
 
 _discovered_styles = {
     name: importlib.import_module(name)
-    for finder, name, ispkg in iter_namespace(mlflow_vismod.styles)
+    for finder, name, ispkg in iter_namespace(mlflow_vizmod.styles)
 }
 
 
@@ -93,7 +93,7 @@ def log_model(
     return Model.log(
         model=model,  # vega_saved_model_dir=vega_saved_model_dir,
         artifact_path=artifact_path,
-        flavor=mlflow_vismod,
+        flavor=mlflow_vizmod,
         conda_env=conda_env,
         registered_model_name=registered_model_name,
         # signature=signature,
@@ -129,7 +129,7 @@ def save_model(
         _save_example(mlflow_model, input_example, path)
 
     # Style-specific Save Logic
-    current_style = _discovered_styles[f"mlflow_vismod.styles.{style}"]
+    current_style = _discovered_styles[f"mlflow_vizmod.styles.{style}"]
     current_style.Style.save(model, path)
 
     # Saving Conda Environment
@@ -148,7 +148,7 @@ def save_model(
         pickled_model="viz.pkl",
     )
     pyfunc.add_to_model(
-        mlflow_model, loader_module="mlflow_vismod", env=conda_env_subpath
+        mlflow_model, loader_module="mlflow_vizmod", env=conda_env_subpath
     )
     mlflow_model.save(os.path.join(path, MLMODEL_FILE_NAME))
 
@@ -168,17 +168,17 @@ def load_model(model_uri, style=None):
                   artifact-locations>`_.
     :return: A visual model.
     """
-    current_style = _discovered_styles[f"mlflow_vismod.styles.{style}"]
+    current_style = _discovered_styles[f"mlflow_vizmod.styles.{style}"]
     local_model_path = _download_artifact_from_uri(artifact_uri=model_uri)
     flavor_conf = _get_flavor_configuration(
         model_path=local_model_path, flavor_name=FLAVOR_NAME
     )
-    vismod_model_artifacts_path = os.path.join(
+    vizmod_model_artifacts_path = os.path.join(
         local_model_path, flavor_conf["pickled_model"]
     )
     serialization_format = flavor_conf.get(
         "serialization_format", SERIALIZATION_FORMAT_CLOUDPICKLE
     )
     return current_style.Style(
-        artifact_uri=vismod_model_artifacts_path,
+        artifact_uri=z_model_artifacts_path,
     )

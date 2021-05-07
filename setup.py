@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
 
-APP_NAME = "mlflow_vismod"
+APP_NAME = "mlflow_vizmod"
 VERSION = "1.1.1"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard, Andrew Bauman"

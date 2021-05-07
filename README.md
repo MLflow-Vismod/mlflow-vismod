@@ -83,7 +83,7 @@ viz_iris = alt.Chart(
 ).interactive()
 
 # Log Model
-mlflow_vismod.log_model(
+mlflow_vizmod.log_model(
     model=viz_iris, 
     artifact_path='viz',
     style='vegalite',
@@ -112,7 +112,7 @@ First we will load the ML model.
 ```python
 # Load model
 model_uri = os.path.join(run_iris.to_dictionary()['info']['artifact_uri'], 'viz')
-loaded_viz_iris = mlflow_vismod.load_model(
+loaded_viz_iris = mlflow_vizmod.load_model(
     model_uri=model_uri,
     style='vegalite'
 )

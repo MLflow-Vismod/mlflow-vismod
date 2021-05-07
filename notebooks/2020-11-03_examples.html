@@ -14278,7 +14278,7 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">altair_viewer</span>
 
 <span class="c1"># Internal Libraries</span>
-<span class="kn">import</span> <span class="nn">mlflow_vismod</span>
+<span class="kn">import</span> <span class="nn">mlflow_vizmod</span>
 
 
 <span class="c1"># Remove Max Rows Limit in Altair</span>
@@ -14700,7 +14700,7 @@ a.anchor-link {
     <span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
     
     <span class="c1"># Log Model</span>
-    <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
+    <span class="n">mlflow_vizmod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="n">viz_iris</span><span class="p">,</span> 
         <span class="n">artifact_path</span><span class="o">=</span><span class="s1">&#39;viz&#39;</span><span class="p">,</span>
         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span><span class="p">,</span>
@@ -14811,7 +14811,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_uri</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">run_iris</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()[</span><span class="s1">&#39;info&#39;</span><span class="p">][</span><span class="s1">&#39;artifact_uri&#39;</span><span class="p">],</span> <span class="s1">&#39;viz&#39;</span><span class="p">)</span>
-<span class="n">loaded_viz_iris</span> <span class="o">=</span> <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span>
+<span class="n">loaded_viz_iris</span> <span class="o">=</span> <span class="n">mlflow_vizmod</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span>
     <span class="n">model_uri</span><span class="o">=</span><span class="n">model_uri</span><span class="p">,</span>
     <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span>
 <span class="p">)</span>
@@ -14851,7 +14851,7 @@ a.anchor-link {
     <span class="n">viz_diamond</span><span class="o">.</span><span class="n">encoding</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">column_map_diamond</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
     
     <span class="c1"># Log Model</span>
-    <span class="n">mlflow_vismod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
+    <span class="n">mlflow_vizmod</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="n">viz_diamond</span><span class="p">,</span> 
         <span class="n">artifact_path</span><span class="o">=</span><span class="s1">&#39;viz&#39;</span><span class="p">,</span>
         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;altair&#39;</span><span class="p">,</span>
